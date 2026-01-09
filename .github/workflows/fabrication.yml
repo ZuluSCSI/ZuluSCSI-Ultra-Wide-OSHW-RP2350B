@@ -1,0 +1,66 @@
+name: Generate fabrication files
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  generate:
+    name: Generate fabrication files
+    runs-on: ubuntu-24.04
+    
+    steps:
+      - name: Check out code from GitHub
+        uses: actions/checkout@v4
+        with:
+          path: zuluscsi
+      
+      - name: Install dependencies
+        run: |
+          sudo add-apt-repository --yes ppa:kicad/kicad-9.0-releases
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends kicad python3 wget
+          sudo apt-get install --yes gsettings-backend libcairo2 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk2.0-0 libdxflib3
+          sudo pip3 install --break-system-packages git+https://github.com/yaqwsx/KiKit.git
+          git clone https://github.com/openscopeproject/InteractiveHtmlBom.git
+
+      - name: Install gerbv
+        run: |
+          git clone https://github.com/gerbv/gerbv.github.io.git
+          cd gerbv.github.io/ci/
+          tar xvzf gerbv*Ubuntu*.tar.gz
+          sudo cp gerbv /usr/local/bin
+          sudo cp libgerbv.so.1.0.* /usr/local/lib
+          sudo ldconfig
+      
+      - name: Generate fabrication files
+        run: |
+          export PATH=`pwd`/InteractiveHtmlBom/InteractiveHtmlBom:$PATH
+          export INTERACTIVE_HTML_BOM_NO_DISPLAY=1
+          cd zuluscsi
+          mkdir -p images
+          ./kikit_run.sh
+      
+      - name: Upload JLCPCB gerbers
+        uses: actions/upload-artifact@v4
+        with:
+          path: zuluscsi/gerbers/jlcpcb.zip
+          name: ZuluSCSI-Ultra-Wide-OSHW gerbers for JLCPCB
+
+      - name: Upload OSHPARK gerbers
+        uses: actions/upload-artifact@v4
+        with:
+          path: zuluscsi/gerbers/oshpark.zip
+          name: ZuluSCSI-Ultra-Wide-OSHW gerbers for OSHPARK
+
+      - name: Upload PCBWAY gerbers
+        uses: actions/upload-artifact@v4
+        with:
+          path: zuluscsi/gerbers/pcbway.zip
+          name: ZuluSCSI-Ultra-Wide-OSHW gerbers for PCBWAY
+
+      - name: Upload images
+        uses: actions/upload-artifact@v4
+        with:
+          path: zuluscsi/images/*
+          name: Images of the PCB
+
