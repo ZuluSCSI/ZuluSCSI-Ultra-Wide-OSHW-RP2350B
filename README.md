@@ -1,4 +1,4 @@
-ZuluSCSI™ Ultra Wide OSHH - Community Edition - Open Source Hardware
+ZuluSCSI™ Ultra Wide OSHW - Community Edition - Open Source Hardware
 ========================
 
 This repository contains the KiCAD 9 schematic and PCB design files for an Open Source Hardware variant of the RP2350B-based ZuluSCSI™ SCSI to SD storage emulator, derived from George Mezzomo's incomplete-at-time-of-forking [RP2350B-based GBSCSI2 wide board](https://github.com/GeorgeRudolf/GBSCSI2/tree/main/rp2350_HD68_3.5). 
