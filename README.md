@@ -9,6 +9,8 @@ This hardware design is licensed under the terms of the strongly reciprocal CERN
 
 The Rev 2026b ZuluSCSI Ultra Wide OSHW design is [OSHWA-certified](https://certification.oshwa.org/us002798.html)
 
+[<img src="OSHWA-certification/certification-mark-US002798-wide.png" width="256">](https://certification.oshwa.org/us002798.html)
+
 ZuluSCSI™ is a registered trademark of Rabbit Hole Computing, and may not be used commercially without the express written consent of Rabbit Hole Computing. Individuals producing ZuluSCSI boards for personal use are hereby granted permission to use the ZuluSCSI trademark in a noncommercial capacity.
 
 _Any_ use of the ZuluSCSI trademark in a **commercial** context requires prior written consent from Rabbit Hole Computing.
