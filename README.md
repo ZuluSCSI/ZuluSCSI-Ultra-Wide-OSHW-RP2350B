@@ -7,6 +7,8 @@ Numerous small improvements to routing, pinouts, expansion headers, and power ci
 
 This hardware design is licensed under the terms of the strongly reciprocal CERN OHL-S V2 license, which can be viewed in full at https://ohwr.org/cern_ohl_s_v2.txt and https://ohwr.org/cern_ohl_s_v2.pdf. 
 
+The Rev 2026b ZuluSCSI Ultra Wide OSHW design is [OSHWA-certified](https://certification.oshwa.org/us002798.html)
+
 ZuluSCSI™ is a registered trademark of Rabbit Hole Computing, and may not be used commercially without the express written consent of Rabbit Hole Computing. Individuals producing ZuluSCSI boards for personal use are hereby granted permission to use the ZuluSCSI trademark in a noncommercial capacity.
 
 _Any_ use of the ZuluSCSI trademark in a **commercial** context requires prior written consent from Rabbit Hole Computing.
