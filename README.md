@@ -1,5 +1,8 @@
 ZuluSCSI™ Ultra Wide OSHW - Community Edition - Open Source Hardware
 ========================
+ZuluSCSI Ultra Wide is the worlds first* OSHW _ultra wide_ SCSI emulator. It's an open-source alternative to our commercially-available [ZuluSCSI Wide](https://shop.rabbitholecomputing.com/blogs/news/zuluscsi-wide-33mb-sec-wide-scsi-emulator), which uses much higher-quality printed circuit boards and largely higher-quality components. 
+
+ZuluSCSI Ultra Wide runs unmodified [ZuluSCSI Wide firmware](https://github.com/ZuluSCSI/ZuluSCSI-firmware/releases).
 
 This repository contains the KiCAD 9 schematic and PCB design files for an Open Source Hardware variant of the RP2350B-based ZuluSCSI™ SCSI to SD storage emulator, derived from George Mezzomo's incomplete-at-time-of-forking [RP2350B-based GBSCSI2 wide board](https://github.com/GeorgeRudolf/GBSCSI2/tree/main/rp2350_HD68_3.5). 
 
@@ -16,3 +19,5 @@ ZuluSCSI™ is a registered trademark of Rabbit Hole Computing, and may not be u
 _Any_ use of the ZuluSCSI trademark in a **commercial** context requires prior written consent from Rabbit Hole Computing.
 
 <img width="1804" height="1732" alt="ZuluSCSI-Ultra-Wide-OSHW-Rev2026b-topDownRender" src="https://github.com/user-attachments/assets/445ea9e0-7c0f-47ee-830e-d1ef68602845" />
+
+* that we know of :)
